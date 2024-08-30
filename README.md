@@ -10,5 +10,7 @@ os operadores vem nativamente do python e servem para realizarmos operações ma
 
 ## maniopulando strings
 split faz a divisão de uma string criando uma lista com os objetos separados pelo espaço
+.strip remove os espaços indesejados do texto
+.find é capaz de encontrar a posição de um elemento dentro de uma string, podemos ainda utilizar rfind para encontrar a ocorrencia da direita e lfind para encontrar a ocorrencia da esquerda
 
 
