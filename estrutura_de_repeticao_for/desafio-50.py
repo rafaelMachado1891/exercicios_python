@@ -1,11 +1,12 @@
 # faça um programa que leia 6 numero inteiros e realize a soma somente dos numeros pares! 
 
-n1 = int(input('digite seis números inteiros: '))
-n2 = int(input())
-n3 = int(input())
-n4 = int(input())
-n5 = int(input())
-n6 = int(input())
-lista = [n1,n2,n3,n4,n5,n6]
+soma = 0
+count = 0
 
-print(lista)
+for i in range(1,7):
+    numero = int(input(f'Digite o {i} valor: '))
+    if numero % 2 ==0:
+        soma += numero # soma dos elementos
+        count += 1 # contador 
+print(f'você informou {count} numeros pares e a soma desses numeros é {soma}')
+
