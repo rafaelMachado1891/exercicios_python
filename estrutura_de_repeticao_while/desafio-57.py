@@ -1,3 +1,4 @@
+# faça um programa que solicite o sexo do usuario, o programa deve aceitar somente M ou F.
 
 nome = str(input('digite o sexo do usuario [M/F]: ')).upper().strip()[0]
 
