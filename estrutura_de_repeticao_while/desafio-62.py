@@ -1,19 +1,17 @@
-# melhore o desafio 61 perguntando ao usuario se ele quer adicionar mais algum termo: 
+# escreva um programa que leia o primeiro termo e crie uma PA. No final mostre os 10 primeiros termos dessa progressao
 
 numero = int(input('digite o primeiro termo: '))
 razao = int(input('razao: '))
-decimo = 0
-while decimo < razao:
-    decimo += 1
-    pa = decimo * razao
-    print(pa, end=' ')
-print('deseja adicionar mais um termo?')
-resposta = str(input()).lower()
-if resposta == 'sim':
-    nova_razao = int(input('digite o termo: '))
-    decimo += 1
-    new_pa = pa * nova_razao
-    print(new_pa, end= ' ')
-else: 
-    print('vc encerrou o programa')
-# print(pa)
+termo = numero
+decimo = 1
+mais = 10
+total = 0
+while mais != 0:
+    total = total + mais
+    while decimo <= total:
+        print(f'{termo} ->', end=' ')
+        termo += razao
+        decimo +=1    
+    print('Pausa')
+    mais = int(input('quanto termos você deseja adicionar a mais?' ))
+print('progresso')
