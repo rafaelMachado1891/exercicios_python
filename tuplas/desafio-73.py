@@ -12,6 +12,8 @@ ultimos_colocados = print(f'Os 4 ultimos colocados da tabela são: {classificaca
 
 order = print(sorted(classificacao)) # metodo para ordenar uma tupla
 
-posicao = print(f' o Time Vasco esta na posição {classificacao.index('Vasco')} da tabela')
+tabela = classificacao.index('Vasco') + 1 
+
+posicao = print(f' o Time Vasco esta em {tabela}º colocado')
 
 
