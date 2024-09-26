@@ -18,12 +18,10 @@ while True:
     c+=1
     if p >= 1000:
        produtos+=1
-    if c ==1:
+    if c ==1 or p < menor:
+       menor = p
        nome = n
-    else:
-       if p < menor:
-          nome = n
-        
+    
     while r not in 'NS':
         r = str(input('Deseja cadastrar mais intens? [S/N]: ')).upper().strip()[0]
     if r in 'N':
@@ -31,4 +29,4 @@ while True:
     else:
        pass
 
-print(f'O total das compras é R${total:.2f}, são {produtos} produtos com valor acima de R$ 1,000.00, o produto com o menor valor é {nome}')
+print(f'O total das compras é R${total:.2f}, são {produtos} produtos com valor acima de R$ 1,000.00, o produto com o menor valor é {nome} que custa R${menor:.2f}')
