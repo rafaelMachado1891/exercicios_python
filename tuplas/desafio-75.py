@@ -10,7 +10,8 @@ for i in range (4):
     tupla += (i,)
     
     if i == 3: 
-       posicao = tupla.index(3)
+       posicao = tupla.index(3) + 1 
+       
     else:
         pass
     
