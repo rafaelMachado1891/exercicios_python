@@ -12,8 +12,10 @@ while True:
     else:
         v = int(input('Digite um número: '))
         if v in lista:
-            lista.append(v)
+         pass
         else:
-            pass
+         lista.append(v)
+
     r = str(input('Deseja adcionar mais valores [S/N]: ')).upper().strip()[0]
+lista.sort()
 print(f'{lista}')
