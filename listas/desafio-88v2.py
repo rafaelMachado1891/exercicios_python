@@ -4,24 +4,27 @@
 from random import randint
 
 lista = []
-temp = []
-cont = 0
-jogos = 0
+listaint = []
+jogos = 1
 qtde = int(input('Quantos jogos você deseja gerar? '))
-print(qtde)
 
-  
-while True:
-    num = randint(1,60)
-    if num not in lista:
-        lista.append(num)
-        cont+=1
-        lista.sort()
-    if cont >= 6:
-        break
+
+while jogos <= qtde:
+    cont = 0 
+    while True:
+        num = randint(1,60)
+        if num not in lista:
+            lista.append(num)
+            cont+=1
+        if cont >= 6:
+            break
+    lista.sort()
+    listaint.append(lista[:])
+    lista.clear()
+    jogos+=1
 
         
-print(lista)
+print(listaint)
 
 
     
