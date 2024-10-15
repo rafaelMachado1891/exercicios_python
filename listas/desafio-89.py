@@ -6,30 +6,14 @@ lista = []
 temp = []
 notas = []
 
-r= 'S'
 while True:
-    if r == 'S':
-        nome =  temp.append(str(input('Digite o nome do aluno: ')))
-        nota1 = notas.append(float(input('Digite a primeira nota: ')))
-        nota2 = notas.append(float(input('Digite a segunda nota: ')))
-        temp.append(notas[:])
-        notas.clear()
-        lista.append(temp[:])  
-        temp.clear()
+        nome =  str(input('Digite o nome do aluno: '))
+        nota1 = float(input('Digite a primeira nota: '))
+        nota2 = float(input('Digite a segunda nota: '))
+        lista.append([nome,[nota1,nota2],(nota1 + nota2)/2]) 
         r=str(input('Deseja continua [S/N]: ')).upper().strip()[0]
-    else:
-        break
+        if r == 'N':
+            break
 
 print(lista)
-
-for i, l in enumerate(lista):
-    print(f'{i}',end=' ')
-    print(l[0])
-    for a, b in enumerate(lista[1][1]):
-        print(b)
-        
-     #   print(l)
-#for i, l in enumerate(lista):
-#   soma = (l[1] + l[2]) / 2
-#   print(f'O aluno {l[0]} atingiu a média {soma}')
 
