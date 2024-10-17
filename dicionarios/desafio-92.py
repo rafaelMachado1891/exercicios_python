@@ -10,9 +10,9 @@ nascimento = int(input('Ano Nascimento: '))
 carteira_trabalho = int(input('Possui_carteira: [0] não/ [1] sim: '))
 idade =  datetime.today().year - nascimento # - nascimento 
 
-dados ['Nome'] = nome,
-dados ['Nascimento']= nascimento,
-dados ['Carteira_trabalho']= carteira_trabalho,
+dados ['Nome'] = nome
+dados ['Nascimento']= nascimento
+dados ['Carteira_trabalho']= carteira_trabalho
 dados ['Idade']=idade
 
 if carteira_trabalho != 0:
@@ -22,4 +22,8 @@ if carteira_trabalho != 0:
 tempo = 35 - (datetime.today().year - dados['Contratacao'])
 dados ['Tempo_aposentadoria'] = tempo
 
+print('-='*30)
 print(dados)
+print('-='*30)
+for k, v in dados.items():
+    print(f'{k:<20}  {v:>15}')
