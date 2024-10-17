@@ -15,12 +15,11 @@ dados ['Nascimento']= nascimento,
 dados ['Carteira_trabalho']= carteira_trabalho,
 dados ['Idade']=idade
 
-
-
 if carteira_trabalho != 0:
     dados ['Contratacao'] = int(input('Digite o ano de contratacao: '))
-    dados ['Salario'] = float(input('Digite o salário base: '))
-    dados ['tempo_para_aposentadoria'] = 65 - idade
-
+    dados ['Salario'] = float(input('Digite o salário base: ')) 
+ 
+tempo = 35 - (datetime.today().year - dados['Contratacao'])
+dados ['Tempo_aposentadoria'] = tempo
 
 print(dados)
