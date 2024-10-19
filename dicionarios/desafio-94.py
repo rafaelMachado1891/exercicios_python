@@ -2,17 +2,38 @@
 # e todos os dicionários em uma lista. No final, mostre: Quantas pessoas foram cadastradas, e média de idade do grupo.
 # uma lista com todas as mulheres, uma lista com todas as pessoas com idade acima da média. 
 lista = []
+listam = []
 r= 'S'
 
 while r == 'S':
     dicionario = {}
-    dicionario ["Nome"] = str(input('nome: '))
+    dicionario ["Nome"] = str(input('nome: ')).upper()
     dicionario ["Sexo"] = str(input('sexo [M/F]: ')).upper().strip()[0]
     dicionario ["idade"] = int(input('idade: '))
     lista.append(dicionario)
     r=str(input('deseja continuar?: ')).upper().strip()[0]
+    while r not in ('SN'):
+          r=str(input('deseja continuar?: ')).upper().strip()[0]
+
+print('-='*30)
     
 print(lista)
+
+print('-='*30)
+
+print(f'No total foram cadastradas {len(lista)} pessoas.')
+
+for i in lista:
+     if i['Sexo'] == 'M':
+          listam.append(i)
+
+print(f'As pessoas de sexo masculino cadastradas foram:')
+
+
+for i in listam:
+     print(i)
+                    
+
     
     
 
