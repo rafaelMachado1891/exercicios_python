@@ -4,6 +4,8 @@
 lista = []
 listam = []
 r= 'S'
+total=0
+maior = []
 
 while r == 'S':
     dicionario = {}
@@ -29,10 +31,21 @@ for i in lista:
 
 print(f'As pessoas de sexo masculino cadastradas foram:')
 
-
 for i in listam:
      print(i)
-                    
+
+for i in lista:
+     total+= i['idade']
+
+media = total / len(lista)
+     
+print(f'a media de idade das pessoas cadastradas é {media}')
+
+for i in lista:
+     if i['idade'] > media:
+          maior.append(i)
+
+print(f'As pessoas com idade acima da média são {maior}')
 
     
     
