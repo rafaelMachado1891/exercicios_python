@@ -6,7 +6,6 @@ from time import sleep
 
 def somar_valores_pares(lista):
     valor = 0
-    pos = 0
     for i, v in enumerate(lista):
         if v % 2 ==0:
             valor+=v
@@ -19,20 +18,16 @@ def sortear_valores_lista(lista):
     for i in range(0,6):
         n=randint(1, 60)
         lista.append(n)
-    print(f'Sorteando....',end=' ',flush=True)
+        t=len(lista)
+    print(f'Sorteando {t} valores....',end=' ',flush=True)
     sleep(0.5)
-
-    pos=0
-
     for i in (lista):
-        print(f'{lista[pos]}', end=' ',flush=True)
+        print(f'{i}', end=' ',flush=True)
         sleep(0.5)
-        pos+=1
 
 
 lista = []
 
-
-sortear_valores_lista(lista)   
+sortear_valores_lista(lista)
 somar_valores_pares(lista)
 
