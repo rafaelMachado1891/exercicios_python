@@ -6,7 +6,7 @@ def metade (p):
     val = p / 2 
     return val
 
-def aumentar(a=0, b=0):
+def aumentar(a=0):
     b=int(input('Quanto % você deseja aumentar: '))
     per = b / 100
     valor = a * (1+ per)
